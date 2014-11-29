@@ -1,0 +1,804 @@
+/*
+Theme Name: Unpad2014
+Theme URI: http://pupungbp.com/unpad
+Description: Responsive, Full Featured
+Tags: white, light, photoblog, portfolio
+Author: Pupung BP
+Author URI: http://pupungbp.com/
+License: GNU General Public License
+License URI: http://pupungbp.com/licence.html
+*/
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?51886854');
+  src: url('fonts/fontello.eot?51886854#iefix') format('embedded-opentype'),
+       url('fonts/fontello.woff?51886854') format('woff'),
+       url('fonts/fontello.ttf?51886854') format('truetype'),
+       url('fonts/fontello.svg?51886854#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+}
+.icon-home:before { 
+    font-family: 'fontello' !important; 
+    content: '\e805';
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 50px;
+} /* '' */
+.icon-youtube:before { content: '\e800'; } /* '' */
+.icon-gplus:before { content: '\e801'; } /* '' */
+.icon-facebook:before { content: '\e802'; } /* '' */
+.icon-twitter:before { content: '\e803'; } /* '' */
+.icon-flickr:before { content: '\e804'; } /* '' */
+.icon-menu:before { 
+    content: '\e806'; 
+    font-size: 25px;
+    line-height: 50px;
+} /* '' */
+i:before { font-style: normal !important; }
+/* 	
+	Styling Index
+	This is how we organized the styling
+	1. CSS Reset
+	2. Wordpress Structure
+	3. Layout
+		A. Header
+		B. Body
+		C. Footer
+	4. Content
+	5. Typography
+	6. Colors
+	7. Responsive
+*/
+/*
+1. CSS RESET
+============
+http://meyerweb.com/eric/tools/css/reset/
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* For modern browsers */
+.clear:before,
+.clear:after {
+  content:"";
+  display:table;
+}
+ 
+.clear:after {
+clear:both;
+}
+ 
+/* For IE 6/7 (triggers hasLayout) */
+.clear {
+  *zoom:1;
+}
+/*
+2. WORDPRESS STRUCTURE
+============
+http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+ */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 0px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+/*
+3. LAYOUT
+============
+ */                                 
+.internal {
+	margin: 0 auto;
+	max-width: 940px;
+}
+/*
+3.1. LAYOUT: Header
+============
+ */
+header {
+}
+#navtop {
+	background: url(images/navtop-bg.png) repeat-x top;
+	height: 34px;
+	text-align: right;
+}
+#navtop li {
+	display: inline-block;
+    line-height: 34px;
+    padding: 0 12px;
+}
+#navmain {
+    background: url(images/navmain-bg.png) repeat-x top;
+    min-height: 54px;
+}
+#navmain ul {
+    float: right;
+}
+#navmain li {
+    float: left;
+    line-height: 54px;
+    padding: 0px 20px;
+}
+#navtop li:last-child,
+#navmain li:last-child {
+    padding-right: 0px;
+}
+.logo {
+    background: url(images/logo.png) no-repeat;
+    width: 187px;
+    height: 68px;
+    display: block;
+    position: absolute;
+    top: 32px;
+    text-indent: -9999px;
+    text-align: left;
+    z-index: 200;
+}
+.breadcrumb {
+    padding-bottom: 15px;
+    padding-top: 20px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 25px;
+}
+.maincol .meta {
+    padding-bottom: 20px;
+    display: block;
+}
+/*
+3.2. LAYOUT: Homepage
+============
+ */
+/* Scaling transforms */
+.rsSlide img {
+    opacity: 0.35;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.rsActiveSlide img {
+    opacity: 1;
+    -webkit-transform: scale(1);  
+    -moz-transform: scale(1); 
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.rsOverflow {
+    cursor: default !important;
+}
+.rsABlock {
+    text-align: center;
+    top: 160px;
+    width: 942px;
+    font-size: 34px;
+}
+.txtCent {
+    top: 200px;
+    font-size: 16px;
+}
+.row1 .internal > div,
+.row2 .internal > div,
+.row3 .internal > div {
+    float: left;
+}
+.row1 {
+    padding-bottom: 30px;
+    background-color: #fff;
+}
+.row2 {
+    background: #f6a113;
+    padding: 10px 0 30px 0;
+}
+.newsfeed {
+    width: 60%;
+}
+.agendafeed {
+    width: 36%;
+    padding-left: 3%;
+}
+.profilfeed {
+    width: 34%;
+}
+.pengumumanfeed {
+    width: 33%;
+}
+.unpadtvfeed {
+    width: 33%;
+}
+.floatinglink {
+    position: absolute;
+    top: 485px;
+    font: 12px "proxima-nova",helvetica,arial,sans-serif;
+}
+.floatinglink a {
+    padding: 5px;
+    color: #fff;
+    background: rgba(252, 79, 64, 0.6);
+}
+.floatinglink a:first-child {
+    padding-left: 15px;
+}
+.floatinglink a {
+    margin-right: 1px;
+}
+.newsfeed h2,
+.agendafeed h2,
+.profilfeed h2,
+.pengumumanfeed h2,
+.unpadtvfeed h2 {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+.latest {
+    width: 50%;
+    float: left;
+    min-height: 250px;
+    position: relative;
+}
+.latest h3 {
+    padding-top: 20px;
+}
+.latest .date {
+    color: #ffffff;
+    position: absolute;
+    top: 108px;
+    left: 0;
+    padding: 0px 5px 0px 10px;
+    background: rgba(0,0,0, 0.7);
+}
+.recents {
+    width: 46%;
+    padding-left: 2%;
+    float: left;
+    border-right: 1px solid #efefef;
+}
+.recents .post {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #efefef;
+    width: 85%;
+}
+.recents .post .date {
+    padding-bottom: 5px;
+    display: block;
+    padding-top: 7px;
+}
+.agendapost {
+    padding-bottom: 25px;
+}
+.agendapost h3,
+.agendapost .meta {
+    display: block;
+    padding-left: 57px;
+}
+.agendapost .meta {
+    padding-top: 5px;
+}
+.agendapost .date {
+    display: block;
+    float: left;
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    border-top-right-radius: 14px;
+    padding: 6px;
+    margin-right: 10px;
+}
+.agendapost .date .day {
+    display: block;
+    padding-top: 3px;
+}
+.profilfeed h3 {
+    padding: 15px 0 20px 0;
+    width: 90%;
+}
+.pengumumanfeed h3 {
+    width: 90%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #d38401;
+}
+.unpadtvfeed h3 {
+    padding-top: 15px;
+    line-height: 22px;
+}
+.row3 {
+    padding: 25px 0;
+}
+.row3 h2 {
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+}
+.row3 .internal > div {
+    width: 24%;
+}
+.agenda-properties {
+    background: #efefef;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.agendapost.ramadan {
+    background-color: #042908;
+    padding-bottom: 0;
+    border-radius: 4px;
+    background: url('images/hikmah-bg.jpg') no-repeat center;
+    border: 3px solid #042908;
+}
+.agendapost.ramadan img {
+    width: 20%;
+    height: auto;
+    padding: 16px 10px 10px 10px;
+    float: left;
+}
+.agendapost.ramadan a {
+    color: #ffffff;
+}
+.agendapost.ramadan h3 {
+    padding: 15px;
+    font-family: "elina-web";
+    font-size: 20px;
+    line-height: 24px;
+    text-shadow: 1px 1px #000000;
+}
+
+/*
+3.3. LAYOUT: Body
+============
+ */
+.mainarea {
+    min-height: 450px;
+    padding-bottom: 35px;
+    background-color: #fff;
+}
+.sidebar {
+    float: left;
+    width: 26%;
+    margin-left: 5%;
+    padding: 15px;
+    border-radius: 6px;
+}
+.maincol {
+    width: 65%;
+    float: left;
+    color: #343434;
+}
+.maincol h1 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+.maincol p {
+    margin-bottom: 15px;
+    line-height: 22px;
+    font-size: 16px;
+}
+.sidebar ul li {
+    padding: 7px 0;
+    border-bottom: 1px solid #cccccc;
+}
+.sidebar .subpage {
+    margin-bottom: 30px;
+}
+.sidebar ul.children {
+    display: none;
+}
+/* Fakultas */
+#full-width {
+    width: 100%;
+}
+div.faculty {
+    float: left;
+    margin-right: 15px;
+    min-height: 190px;
+    width: 190px;
+}
+
+div.book {
+    float: left;
+    margin-right: 15px;
+    min-height: 425px;
+    width: 190px;
+}
+
+div.book h2 {
+    padding-top: 10px;
+}
+
+div.faculty h2 {
+    padding-top: 10px;
+}
+/*
+3.4. LAYOUT: Footer
+============
+ */
+.row4 {
+    background: #111;
+    min-height: 47px;
+}
+footer {
+	text-align: center;
+}
+#mixstreamPlayerContent {
+    width: 100%;
+}
+/*
+4. CONTENT
+============
+ */
+/*
+4.1. CONTENT: Slideshow
+============
+ */
+#staging {
+    background: url(images/staging-top-bg.png) top;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    min-height: 400px;
+}
+.sub-staging {
+    min-height: 47px;
+    background: #fff url(images/substaging-bg.png) repeat-x top;
+}
+/*
+4.2. CONTENT: Main Column
+============
+ */
+.maincol {
+
+}
+.maincol ul {
+	list-style-type: disc;
+	list-style-position: outside;
+	padding-left: 25px;
+}
+.maincol ol {
+	list-style-type: decimal;
+	list-style-position: outside;
+	padding-left: 25px;
+}
+.maincol ul li, .maincol ol li {
+	padding-bottom: 10px;
+}
+/*
+5. TYPOGRAPHY
+============
+ */
+html {
+}
+body {
+    font-family: "proxima-nova", helvetica, arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+a {
+    text-decoration: none;
+}
+i {
+	font-style: italic;
+}
+#navtop, .sub-staging {
+    font-size: 11px;
+    font-weight: 700;
+    font-family: "pt-sans", helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#navtop a {
+    text-decoration: none;
+}
+#navtop a:hover, a:hover {
+    opacity: 0.8;
+}
+#navmain {
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "proxima-nova", helvetica, arial, sans-serif;
+    text-transform: uppercase;
+}
+#navmain a {
+    text-decoration: none;
+}
+.stagelink {
+    line-height: 40px;
+    width: 30%;
+}
+.stagelink a {
+    text-decoration: none;
+}
+.feedtitle {
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "proxima-nova", helvetica, arial, sans-serif;
+    text-transform: uppercase;
+}
+.newsfeed .latest {
+    font-size: 22px;
+    line-height: 25px;
+}
+.newsfeed a {
+    text-decoration: none;
+}
+.newsfeed .date {
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.recents .post h3 {
+    line-height: 18px;
+}
+.agendapost h3,
+.recents .post h3 {
+    font-size: 16px;
+    line-height: 18px;
+}
+.agendapost .date {
+    text-align: center;
+    line-height: 16px;
+}
+.agendapost .date .day {
+    font-size: 20px;
+}
+.agendapost .date .month {
+    text-transform: uppercase;
+    font-size: 11px;
+}
+.agendapost .meta {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.profilfeed h3 {
+    font-size: 20px;
+    line-height: 22px;
+}
+.pengumumanfeed h3 {
+    line-height: 20px;
+}
+.row3 h2 {
+    font-family: "proxima-nova", helvetica, arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.row3 {
+    font-size: 13px;
+    line-height: 20px;
+}
+.social i {
+    font-size: 16px;
+}
+.social a {
+    padding-right: 5px;
+}
+.row4 {
+    font-size: 11px;
+    line-height: 47px;
+}
+.breadcrumb {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.maincol .meta {
+    font-size: 13px;
+}
+.sidebar {
+    font-size: 15px;
+}
+.sidebar .subpage {
+    font-size: 16px;
+}
+.sidebar h2 {
+    font-size: 20px;
+}
+.sidebar ul li {
+    line-height: 20px;
+}
+.maincol ul li, .maincol ol li {
+	font-size: 14px;
+	line-height: 20px;
+}
+.maincol h2 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    padding-bottom: 20px;
+}
+/*
+6. COLORS
+============
+ */
+a {
+    color: #a14543;
+}
+#navtop a {
+	color: #fff;
+}
+#navmain a {
+    color: #99ccff;
+}
+.sub-staging {
+    color: #fff;
+}
+.stagelink a {
+    color: #f6a113;
+}
+#navmain a {
+    text-decoration: none;
+}
+#navmain a:hover {
+    color: #ffffff;
+    opacity: 1;
+}
+.rsSlide a {
+    opacity: 1;
+}
+.feedtitle {
+    color: #242424;
+}
+.newsfeed a {
+    color: #a14543;
+}
+.row2 {
+    background: #f6b13e;
+}
+.row2 a {
+    color: #a13b34;
+}
+.agendapost .date {
+    background: #3a8051;
+    color: #fff;
+}
+.agendapost h3 a {
+    color: #3a8051;
+}
+.row3 {
+    background: #292929;
+}
+.row3 h2 {
+    border-bottom: 1px solid #444444;
+    color: #FFFFFF;
+    width: 80%;
+}
+.row3 a {
+    color: #999;
+}
+.row4 {
+    color: #666;
+}
+input.search {
+    background: #9d9d9d;
+    border: none;
+    padding: 5px;
+}
+.sidebar {
+    background: #efefef;
+}
+
+/*  Google Search */
+input.gsc-input {
+    border: none !important;
+    padding: 5px !important;
+}
+div.gsc-clear-button {
+    display: none !important;
+}
+input.gsc-search-button {
+    display: none !important;
+}
+
+/*
+7. RESPONSIVE
+============
+ */

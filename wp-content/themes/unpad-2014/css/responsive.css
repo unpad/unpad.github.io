@@ -1,0 +1,197 @@
+/* Responsive for Unpad 2014 */
+
+nav.mobile {
+	display: none;
+}
+#mobile-menu {
+	display: none;
+}
+#mobile-menu-button {
+	display: none;
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.internal {
+		max-width: 768px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.latest img {
+		width: 100%;
+	}
+	#my_video_1 {
+		width: 245px !important;
+	}
+	.agendapost img {
+		width: 100%;
+	}
+	.stagelink {
+		width: 45%;
+	}
+	#navmain li {
+		padding: 0 14px;
+	}
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+
+	.internal {
+		max-width: 320px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.latest {
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.recents {
+		float: none;
+		width: 100%;
+		padding-left: 0;
+	}
+	.newsfeed {
+		float: none;
+		width: 100%;
+	}
+	.internal img {
+		width: 100%;
+		height: auto;
+	}
+	.recents {
+		border-right: none;
+	}
+	.recents .post {
+		width: 100%;
+	}
+	.stagelink.alignleft {
+		display: none;
+	}
+	.stagelink.alignright {
+		width: 100%;
+	}
+	.profilfeed, .pengumumanfeed, .agendafeed, .unpadtvfeed {
+		width: 100%;
+		float: none;
+	}
+	.agendafeed {
+		padding-left: 0px;
+	}
+	.pengumumanfeed h3 {
+		width: 100%;
+	}
+	#my_video_1 {
+		width: 100% !important;
+		height: auto !important;
+	}
+	ul.desktop {
+		display: none;
+	}
+	#navtop li {
+		padding: 0 7px;
+	}
+	nav.mobile {
+		display: block;
+	}
+	#mobile-menu-button {
+		display: block;
+		float: right;
+	}
+	.maincol {
+		width: 100%;
+	}
+	.sidebar {
+		width: 90%;
+		margin-left: 0;
+		padding: 5%;
+	}
+	.row3 .internal > div {
+		width: 50%;
+	}
+	.agendapost {
+    	border-bottom: 1px solid #efefef;
+    	margin-bottom: 10px;
+	}
+	#staging {
+		height: 300px;
+		display: none;
+	}
+	.floatinglink {
+		display: none;
+	}
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	.internal {
+		max-width: 480px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.latest {
+		float: left;
+		width: 50%;
+	}
+	.recents {
+		float: left;
+		width: 46%;
+		padding-left: 2%;
+	}
+	/*.newsfeed {
+		float: none;
+		width: 100%;
+	}
+	.internal img {
+		width: 100%;
+		height: auto;
+	}
+	.recents {
+		border-right: none;
+	}
+	.stagelink.alignleft {
+		display: none;
+	}
+	.stagelink.alignright {
+		width: 100%;
+	}
+	.profilfeed, .pengumumanfeed, .agendafeed, .unpadtvfeed {
+		width: 100%;
+		float: none;
+	}
+	.agendafeed {
+		padding-left: 0px;
+	}
+	#my_video_1 {
+		width: 100% !important;
+		height: auto !important;
+	}*/
+
+}
